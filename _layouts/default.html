@@ -6,35 +6,119 @@
     <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link href="{{ '/assets/css/ucsf-banners.css' }}" rel="stylesheet">
+    <link href="{{ '/assets/css/bootstrap.min.css' }}" rel="stylesheet">
+    <link href="{{ '/assets/css/tipcc-tweaks.css' }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+<nav class="navbar navbar-default navbar-fixed-top" id="topnavbar">
+  <div class="top-banner logo">
+    <div class="inner">
+      <div>
+        <div class="logo"></div>
+        <a class="logotype" href="http://www.ucsf.edu/">
+          <span>University of California San Francisco</span>
+        </a>
+      </div>
+      <div class="nav">
+        <ul class="top-banner-menu">
+          <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+          <li><a href="http://www.ucsf.edu/search">Search UCSF</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ '/index.html' }}" title="TIPCC - UCSF Helen Diller Family Comprehensive Cancer Center Compute Cluster (since 2012)">TIPCC</a>
+    </div>
 
-	Hello!
-	
-        {% if site.github.is_project_page %}
-          <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
-        {% endif %}
-
-        {% if site.github.is_user_page %}
-          <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
-
-        {% if site.show_downloads %}
-          <ul>
-            <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-            <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/get-started/access.html' }}">1. Accessing Cluster</a></li>
+            <li><a href="{{ '/get-started/interactive-node.html' }}">2. Interactive Usage</a></li>
+            <li><a href="{{ '/get-started/submit-job.html' }}">3. Submit a Script to Job Queue</a></li>
           </ul>
-        {% endif %}
-      </header>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuration <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/configuration/lmod.html' }}">Enable Software Modules (beta)</a></li>
+            <li><a href="{{ '/configuration/cbc-shared-software.html' }}">Enable CBC-shared Software (deprecated)</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Good Practices <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/good-practices/using-local-scratch.html' }}">Use Local Scratch</a></li>
+            <li><a href="{{ '/good-practices/disk-space-cleanup.html' }}">Cleanup Your Temporary Files</a></li>
+            <li><a href="{{ '/good-practices/torque-pbs-multiprocessing.html' }}">Automatically Acknowledge Job Allocations</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How To <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/howto/submit-jobs-to-the-scheduler.html' }}">Submit Jobs</a></li>
+            <li><a href="{{ '/howto/interactive-jobs-via-scheduler.html' }}">Run Interactive Jobs</a></li>
+            <li><a href="{{ '/howto/compress-files-(as-a-job).html' }}">Compress Files (via Job Queue)</a></li>
+          </ul>
+        </li>
+	
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Software <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/software/software-available-modules.html' }}">Software Modules</a></li>
+            <li><a href="{{ '/software/cbc-shared-software.html' }}">CBC-shared Software</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Troubleshooting <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/troubleshoot/ssh-n6-gives-permission-denied-(publickey).html' }}">SSH Permission Denied?</a></li>
+            <li><a href="{{ '/troubleshoot/cluster-performance.html' }}">Inspecting Jobs and Processes</a></li>
+            <li><a href="{{ '/troubleshoot/details-on-node-going-down.html' }}">Details on Nodes Going Down</a></li>
+            <li><a href="{{ '/troubleshoot/maintenance-actions.html' }}">Inspect Processes on Master</a></li>
+          </ul>
+        </li>
+	
+        <li><a href="{{ '/status/index.html' }}">Status</a></li>
+	
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/about/cluster-hardware.html' }}">Hardware</a></li>
+            <li><a href="{{ '/about/cluster-operating-system.html' }}">Operating System &amp; Scheduler</a></li>
+            <li><a href="{{ '/about/backups.html' }}">File Backup</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ '/about/how-to-join.html' }}">Join <span class="glyphicon glyphicon-heart-empty"></span></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ '/about/about.html' }}">About</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="wrap">
+
       <section>
 
       {{ content }}
@@ -48,7 +132,17 @@
       </footer>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+      $(document.body).css('padding-top', $('#topnavbar').height() + 10);
+      $(window).resize(function(){
+          $(document.body).css('padding-top', $('#topnavbar').height() + 10);
+      });
+  });
+</script>
 
   {% if site.google_analytics %}
     <script>
