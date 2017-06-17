@@ -45,13 +45,7 @@ EOF
 	exit 1
 fi
 
-echo "FOO:"
-git diff --cached --diff-filter=AM | grep -vE "^-" | sed -E 's/(alice|bob|charlie)[@]honeypot[.]ucsf[.]edu//g'
-echo "BAR:"
-git diff --cached --diff-filter=AM | grep -vE "^-" | sed -E 's/(alice|bob|charlie)[@]honeypot[.]ucsf[.]edu//g' | grep -i -E '[a-z]+@[a-z0-9]+[.][a-z0-9]+'
-
 res=$(git diff --cached --diff-filter=AM | grep -vE "^-" | sed -E 's/(alice|bob|charlie)[@]honeypot[.]ucsf[.]edu//g' | grep -i -E '[a-z]+@[a-z0-9]+[.][a-z0-9]+')
-echo res=$res
 if [ -n "$res" ]; then
     echo "EMAIL ADDRESSES DETECTED:"
     printf "%s\n" "$res"
