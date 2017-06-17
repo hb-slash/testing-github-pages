@@ -10,8 +10,10 @@ To inspect how much total temporary disk space are used (everyone's files), do:
 $ /home/shared/cbc/bin/clean_tmp --usage
 ```
 
-**TIPS**: It's recommended to set `$TMPDIR` to your own subdirectory.  If you're already using the [TIPCC Tools](https://github.com/UCSF-CBC/TIPCC-Tools) setup, this is already done for you.  Otherwise, add the following to your `~/.bashrc/` script:
+**TIPS**: It's recommended to set `$TMPDIR` to your own subdirectory.  If you're already using the [CBC-shared Software] setup, this is already done for you.  Otherwise, add the following to your `~/.bashrc/` startup script:
 ```bash
 export TMPDIR=/tmp/$USER
 mkdir -p $TMPDIR
 ```
+
+[CBC-shared Software]: {{ '/configuration/cbc-shared-software.html' | relative_url }}

@@ -1,6 +1,6 @@
 # About
 
-The TIPCC high-performance-compute cluster at the UCSF Helen Diller Family Comprehensive Cancer Center is maintained maintained jointly by members of the [Computational Biology Core](http://cbc.ucsf.edu/) (CBC) and the Translational Informatics Core (TI).
+The TIPCC high-performance-compute cluster at the UCSF Helen Diller Family Comprehensive Cancer Center is maintained maintained jointly by members of the [Computational Biology Core (CBC)](http://cbc.ucsf.edu/) and the Translational Informatics Core (TI).
 
 ## Contact information
 

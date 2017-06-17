@@ -50,7 +50,7 @@ The naming convention is such that it is easy to see what the different versions
 
 Note that nothing is installed under `/home/shared/cbc/software/` per se.  Instead, the different versions may be installed in different locations on the file system. For instance, some versions may be centrally installed (under `/opt/local/bin/`) whereas others are installaed by individual users or by us in the CBC group.  Regardless where they are installed, this setup is such that you can use `/home/shared/cbc/software/` as the go-to folder to check for available shared software before installing them yourselves.
 
-By calling `source /home/shared/cbc/bashrc` (for instance in `~/.bashrc`), the paths to the `*-latest` of many of the above shared software tools are added to the `PATH` environment variable.  This way one will get automatic access to the latest versions of most of these tools.  For details on exactly how the `PATH` etc is setup, see [/home/shared/cbc/bashrc](https://github.com/UCSF-CBC/TIPCC-Tools/blob/master/cbc/shared/bashrc) on the cluster.
+By calling `source /home/shared/cbc/bashrc` (for instance in `~/.bashrc`), the paths to the `*-latest` of many of the above shared software tools are added to the `PATH` environment variable.  This way one will get automatic access to the latest versions of most of these tools.  For details on exactly how the `PATH` etc is setup, see script [/home/shared/cbc/bashrc](https://github.com/UCSF-CBC/TIPCC-Tools/blob/master/cbc/shared/bashrc) on the cluster.
 
 [Enable CBC-Shared Software]: {{ '/configuration/cbc-shared-software.html' | relative_url }}
 

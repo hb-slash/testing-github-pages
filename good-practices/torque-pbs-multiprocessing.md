@@ -4,7 +4,7 @@ When submitting jobs to TORQUE/PBS one can request access to multiple cores/thre
 ```sh
 qsub -l "nodes=1:ppn=8,vmem=12gb"
 ```
-requests one machine (`1`) with eight parallel tasks (`ppn=8`) using in total 12 GiB of RAM (`vmem=12gb`).  For more details on alternatives, see [Submit jobs to the scheduler](https://github.com/UCSF-TI/TIPCC/wiki/Submit-jobs-to-the-scheduler).
+requests one machine (`1`) with eight parallel tasks (`ppn=8`) using in total 12 GiB of RAM (`vmem=12gb`).  For more details on alternatives, see [Submit Jobs] to the scheduler.
 
 When the above job is launched on a node (whichever is available with those resources), the `PBS_NUM_PPN` environment variable is set according to the `ppn=<n>` specifications.  In the above example, it is set as:
 ```sh
@@ -26,3 +26,5 @@ or equivalently
 java -jar /path/to/GenomeAnalysisTK.jar --num_threads $PBS_NUM_PPN ...
 ```
 
+
+[Submit Jobs]: {{ '/howto/submit-jobs-to-the-scheduler.html' | relative_url }}

@@ -11,7 +11,7 @@ Here is how you should use `/scratch/`:
 
 * **Don't leave files on `/scratch/` longer than necessary**.  For instance, have your jobs cleanup after themselves.
 
-* **Specify how much local storage your job will need**.  Local storage is limited to [0.84 - 10.7 TiB depending on node](Cluster-Hardware).  If your job will use up to 400 GiB of disk space, you can specify this resource as `-l gres:scratch=400` (units is in GiB) when submitting the job.  A node with 2,000 GiB of scratch space will at most have five `-l gres:scratch=400` jobs running at the same time.
+* **Specify how much local storage your job will need**.  Local storage is limited to [0.84 - 10.7 TiB depending on node]({{ '/about/cluster-hardware.html' | relative_url }}).  If your job will use up to 400 GiB of disk space, you can specify this resource as `-l gres:scratch=400` (units is in GiB) when submitting the job.  A node with 2,000 GiB of scratch space will at most have five `-l gres:scratch=400` jobs running at the same time.
 
 * **All files on `/scratch/` is local to that node**.  Any files copies / written to a node's `/scratch/` space will only be accessible from that node and not from anywhere else.
 
