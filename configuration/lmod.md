@@ -37,7 +37,7 @@ fi
 _Comment_: If you already use `source /home/shared/cbc/bashrc`, make sure it follows _after_ the if-statement that calls `/etc/bashrc`.
 
 
-_Technical details_: This new module framework is using the [Lmod Module Framework](http://lmod.readthedocs.io/en/latest/), which is a framework that supports both the classical modules written in the Tcl language as well as modules written in the Lua language.
+_Technical details_: This new module framework is using the [Lmod Module Framework](https://lmod.readthedocs.io/en/latest/), which is a framework that supports both the classical modules written in the Tcl language as well as modules written in the Lua language.
 
 
 [software environment modules]: {{ '/software/software-available-modules.html' | relative_url }}
