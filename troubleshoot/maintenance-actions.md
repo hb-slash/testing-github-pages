@@ -17,12 +17,12 @@ root	3455	0.0	0.1	java
 mysql	3730	24.0	0.1	/usr/libexec/mysqld
 
 ## User processes (excl. white-listed ones)
-alice [Alice Aliceson (Alice.Aliceson@honeypot.ucsf.edu)]:
+alice [Alice Aliceson (alice@honeypot.ucsf.edu)]:
 PIDs (on the head node): 87013
 USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 alice    87013  0.0  0.0 100944   104 pts/77   S+   Sep27   0:00 tail -f pilot.minfi.R.out
 
-bob [Bob Bobson (Alice.Aliceson@honeypot.ucsf.edu)]:
+bob [Bob Bobson (bob@honeypot.ucsf.edu)]:
 PIDs (on the head node): 514934
 USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 bob      514934  0.0  0.3 789660 403548 pts/51  S+   Sep16   1:05 /opt/R/R-3.2.0/lib64/R/bin/exec/R
