@@ -46,7 +46,7 @@ EOF
 fi
 
 res=$(git diff --diff-filter=AM | grep -vE "^-" | sed -E 's/(alice|bob|charlie)[@]honeypot[.]ucsf[.]edu//g' | grep -iE "[a-z]+@[a-z0-9]+[.][a-z0-9]+")
-if [ -n "$res" ]; then
+if [[ -n "$res" ]]; then
     echo "EMAIL ADDRESSES DETECTED:"
     printf "%s\n" "$res"
     echo "ERROR: You are commit changes that contain one or more email addresses. If you think this is a false alert, you can commit with '--no-verify'."
