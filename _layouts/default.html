@@ -6,9 +6,9 @@
     <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link href="{{ '/assets/css/ucsf-banners.css' }}" rel="stylesheet">
-    <link href="{{ '/assets/css/bootstrap.min.css' }}" rel="stylesheet">
-    <link href="{{ '/assets/css/tipcc-tweaks.css' }}" rel="stylesheet">
+    <link href="{{ '/assets/css/ucsf-banners.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/tipcc-tweaks.css' | relative_url }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,7 +40,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ '/index.html' }}" title="TIPCC - UCSF Helen Diller Family Comprehensive Cancer Center Compute Cluster (since 2012)">TIPCC</a>
+      <a class="navbar-brand" href="{{ '/index.html' | relative_url }}" title="TIPCC - UCSF Helen Diller Family Comprehensive Cancer Center Compute Cluster (since 2012)">TIPCC</a>
     </div>
 
     <div class="navbar-collapse collapse">
