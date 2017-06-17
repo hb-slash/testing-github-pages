@@ -8,3 +8,6 @@ As of February 2017, the cluster has 28 nodes and ~1,100 cores, which predominan
 [join]: {{ '/about/how-to-join.html' | relative_url }}
 [Cluster Hardware]: {{ '/about/cluster-hardware.html' | relative_url }}
 [Operating System & Scheduler]: {{ '/about/cluster-operating-system.html' | relative_url }}
+
+
+Henrik.Bengtsson@gmail.com
